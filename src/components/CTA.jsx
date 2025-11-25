@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function CTA() {
   return (
     <section className="relative h-[500px]">
@@ -21,10 +23,13 @@ export default function CTA() {
         <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight leading-tight">
           Manejar un MG, la aventura que no te podés perder.
         </h2>
-        <button className="shadow h-11 px-6 py-3 bg-white text-black hover:bg-gray-100 w-fit font-semibold">
+        <Link
+          to="/quote"
+          className="shadow h-11 px-6 py-3 bg-white text-black hover:bg-gray-100 w-fit font-semibold inline-flex items-center justify-center"
+        >
           ¡Agendar Test Drive ahora!
-        </button>
+        </Link>
       </div>
     </section>
-  );
+  )
 }
