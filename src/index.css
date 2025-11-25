@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* helpers */
+.container {
+  @apply mx-auto max-w-7xl;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* === Fuentes Avenir === */
+@font-face {
+  font-family: "Avenir Heavy";
+  src: url("/fonts/Avenir-Heavy-05.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir Light";
+  src: url("/fonts/Avenir-Light-07.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Default body con Light; headings con Heavy vía clases utilitarias */
+:root {
+  --font-heavy: "Avenir Heavy", system-ui, -apple-system, Segoe UI, Roboto,
+    sans-serif;
+  --font-light: "Avenir Light", system-ui, -apple-system, Segoe UI, Roboto,
+    sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  font-family: var(--font-light);
+}
+
+/* Utilidades de tipografía */
+.font-heavy {
+  font-family: var(--font-heavy);
+}
+.font-light {
+  font-family: var(--font-light);
+}
+
+/* Ajustes finos del título grande como en la captura */
+.title-modelos {
+  letter-spacing: -0.02em; /* más compacto */
+  line-height: 1.05; /* similar a la captura */
+}
+
+/* Botón borde negro como en la captura */
+.btn-outline-black {
+  @apply inline-flex items-center justify-center border-2 border-black bg-transparent text-black font-heavy;
+  @apply h-11 px-8 py-2 text-base tracking-tight hover:bg-black hover:text-white transition;
+}
