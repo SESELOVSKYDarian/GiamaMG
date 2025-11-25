@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import HeroSlider from './components/HeroSlider.jsx'
 import ModelsGrid from './components/ModelsGrid.jsx'
@@ -6,8 +7,9 @@ import CTA from './components/CTA.jsx'
 import ServiceCTA from './components/ServiceCTA.jsx'
 import Footer from './components/Footer.jsx'
 import WhatsAppButton from './components/WhatsAppButton.jsx'
+import QuotePage from './pages/QuotePage.jsx'
 
-export default function App() {
+function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -21,5 +23,14 @@ export default function App() {
       <Footer />
       <WhatsAppButton />
     </div>
+  )
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/quote" element={<QuotePage />} />
+    </Routes>
   )
 }
